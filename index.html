@@ -125,7 +125,7 @@
   <script>
     // BASE DE DATOS INGENIERÍA CIVIL INDUSTRIAL UCM
     const ramosData = [
-      // SEMESTRE 1
+       // SEMESTRE 1
       { id: "IND-111", nombre: "Álgebra", semestre: 1, sct: 8, prereqs: [] },
       { id: "IND-112", nombre: "Cálculo I", semestre: 1, sct: 8, prereqs: [] },
       { id: "IND-113", nombre: "Com. en Ingeniería", semestre: 1, sct: 5, prereqs: [] },
@@ -156,46 +156,46 @@
       { id: "IND-311", nombre: "M. M. y Estocástico", semestre: 5, sct: 6, prereqs: ["IND-223"] },
       { id: "IND-313", nombre: "Diseño Ind. y Dib. Téc.", semestre: 5, sct: 6, prereqs: ["IND-221"] },
       { id: "IND-312", nombre: "Termodinám.", semestre: 5, sct: 6, prereqs: ["IND-222"] },
-      { id: "IND-314", nombre: "Adm. y RRHH", semestre: 5, sct: 5, prereqs: ["IND-334"] },
+      { id: "IND-314", nombre: "Adm. y RRHH", semestre: 5, sct: 5, prereqs: [] },
       { id: "MFG-114", nombre: "Introducción a la Fe", semestre: 5, sct: 5, prereqs: [] },
 
       // SEMESTRE 6
       { id: "IND-322", nombre: "Logística", semestre: 6, sct: 6, prereqs: ["IND-311"] },
-      { id: "IND-321", nombre: "Elect. Ind. y Automatiz.", semestre: 6, sct: 6, prereqs: ["IND-312"] },
-      { id: "IND-324", nombre: "Contab. y Finanzas", semestre: 6, sct: 5, prereqs: ["IND-314"] },
+      { id: "IND-321", nombre: "Elect. Ind. y Automatiz.", semestre: 6, sct: 6, prereqs: ["IND-313"] },
+      { id: "IND-324", nombre: "Contab. y Finanzas", semestre: 6, sct: 5, prereqs: [] },
       { id: "IND-323", nombre: "Economía", semestre: 6, sct: 5, prereqs: ["IND-314"] },
-      { id: "IND-325", nombre: "Base de Datos", semestre: 6, sct: 4, prereqs: ["IND-314"] },
+      { id: "IND-325", nombre: "Base de Datos", semestre: 6, sct: 4, prereqs: ["IND-214"] },
       { id: "MFG-216", nombre: "Ética Cristiana", semestre: 6, sct: 5, prereqs: ["MFG-114"] },
 
       // SEMESTRE 7
-      { id: "IND-411", nombre: "Investiga. Operaciones", semestre: 7, sct: 6, prereqs: ["IND-322"] },
-      { id: "IND-412", nombre: "Procesos Industriales", semestre: 7, sct: 6, prereqs: ["IND-313", "IND-321"] },
-      { id: "IND-414", nombre: "Emprend. y Creación Empresas", semestre: 7, sct: 6, prereqs: ["IND-324"] },
+      { id: "IND-411", nombre: "Investiga. Operaciones", semestre: 7, sct: 6, prereqs: ["IND-311"] },
+      { id: "IND-412", nombre: "Procesos Industriales", semestre: 7, sct: 6, prereqs: ["IND-313"] },
+      { id: "IND-414", nombre: "Emprend. y Creación Empresas", semestre: 7, sct: 6, prereqs: [] },
       { id: "IND-413", nombre: "Ingeniería Económica", semestre: 7, sct: 6, prereqs: ["IND-323"] },
       { id: "IND-415", nombre: "Metodología Investigac.", semestre: 7, sct: 6, prereqs: ["IND-334"] },
 
       // SEMESTRE 8
       { id: "IND-421", nombre: "Gestión de Operaciones", semestre: 8, sct: 6, prereqs: ["IND-411"] },
       { id: "IND-422", nombre: "Control de Gestión", semestre: 8, sct: 4, prereqs: ["IND-412"] },
-      { id: "IND-423", nombre: "Des. Personal y Liderazgo", semestre: 8, sct: 5, prereqs: ["IND-414"] },
-      { id: "IND-424", nombre: "Creatividad Prototipaje Negocios", semestre: 8, sct: 5, prereqs: ["IND-413"] },
+      { id: "IND-423", nombre: "Des. Personal y Liderazgo", semestre: 8, sct: 5, prereqs: [] },
+      { id: "IND-424", nombre: "Creatividad Prototipaje Negocios", semestre: 8, sct: 5, prereqs: [] },
       { id: "IND-425", nombre: "Módulo Integ. Lic. (Práctica 1)", semestre: 8, sct: 10, prereqs: ["IND-415"] },
       { id: "CFG-1", nombre: "Certificación I", semestre: 8, sct: 5, prereqs: [] },
 
       // SEMESTRE 9
       { id: "IND-511", nombre: "Optimiza. Operaciones", semestre: 9, sct: 5, prereqs: ["IND-421"] },
       { id: "IND-512", nombre: "Gestión Análisis Información", semestre: 9, sct: 5, prereqs: ["IND-422"] },
-      { id: "IND-513", nombre: "Formul. y Ev. de Proyectos", semestre: 9, sct: 5, prereqs: ["IND-423", "IND-424"] },
+      { id: "IND-513", nombre: "Formul. y Ev. de Proyectos", semestre: 9, sct: 5, prereqs: ["IND-413"] },
       { id: "IND-514", nombre: "Propiedad Intelectual", semestre: 9, sct: 5, prereqs: ["IND-424"] },
       { id: "IND-515", nombre: "Marketing Estrat. Comer. Tec.", semestre: 9, sct: 5, prereqs: ["IND-425"] },
       { id: "CFG-2", nombre: "Certificación II", semestre: 9, sct: 5, prereqs: ["CFG-1"] },
 
       // SEMESTRE 10
-      { id: "IND-521", nombre: "Gestión Calidad Prod.", semestre: 10, sct: 5, prereqs: ["IND-511"] },
-      { id: "IND-522", nombre: "Electivo Ev. Proyectos", semestre: 10, sct: 5, prereqs: ["IND-512"] },
-      { id: "IND-523", nombre: "Plan. Estrat. y Gestión Negocios", semestre: 10, sct: 6, prereqs: ["IND-513"] },
+      { id: "IND-521", nombre: "Gestión Calidad Prod.", semestre: 10, sct: 5, prereqs: ["IND-412"] },
+      { id: "IND-522", nombre: "Electivo Ev. Proyectos", semestre: 10, sct: 5, prereqs: ["CFG-2"] },
+      { id: "IND-523", nombre: "Plan. Estrat. y Gestión Negocios", semestre: 10, sct: 6, prereqs: [] },
       { id: "IND-524", nombre: "Gestión Proyectos I+D+i+e", semestre: 10, sct: 5, prereqs: ["IND-514"] },
-      { id: "IND-525", nombre: "Inteligencia Comp. y Vig. Tec.", semestre: 10, sct: 5, prereqs: ["IND-515"] },
+      { id: "IND-525", nombre: "Inteligencia Comp. y Vig. Tec.", semestre: 10, sct: 5, prereqs: [] },
       { id: "CFG-3", nombre: "Certificación III", semestre: 10, sct: 5, prereqs: ["CFG-2"] },
 
       // SEMESTRE 11
